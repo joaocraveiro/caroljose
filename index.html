@@ -16,6 +16,7 @@
     <meta property="twitter:image" content="/img/thumbnail.jpg">
     <title>Carol & Jose</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -92,19 +93,23 @@
 
                 <a class="hotel-info" href="https://www.booking.com/searchresults.pt-pt.html?ss=Vila+Vi%C3%A7osa%2C+Alentejo+%28Rota+dos+Vinhos+do+Alentejo%29%2C+Portugal&efdco=1&label=gen173nr-10CAEoggI46AdIM1gEaLsBiAEBmAEzuAEHyAEM2AED6AEB-AEBiAIBqAIBuAKvnZXPBsACAdICJDlhYjg3NGFjLTcyMjUtNDkyMy04N2UwLWU3ZWYzOTAxMzVlY9gCAeACAQ&aid=304142&lang=pt-pt&sb=1&src_elem=sb&src=index&dest_id=-2179891&dest_type=city&ac_position=0&ac_click_type=b&ac_langcode=pt&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=eeac99d82fa2060b&ac_meta=GhBlZWFjOTlkODJmYTIwNjBiIAAoATICcHQ6B3ZpbGEgdmk%3D&checkin=2026-10-04&checkout=2026-10-05&group_adults=2&no_rooms=1&group_children=0" target="_blank">
                     <div class="hotel-info-content">
-                        <h4 data-translate="accommodationHotel2">Hotel Varchotel ***</h4>
-                        <p data-translate="accommodationHotel2Desc"></p>
+                        <h4>Hotel Varchotel ***</h4>
                     </div>
                     <img class="hotel-image" src="img/varchotel.jpg" alt="Hotel Serra da Gardunha">
                 </a>      
                 
                 <a class="hotel-info" href="https://www.pousadas.pt/pt/hotel/pousada-vila-vicosa" target="_blank">
                     <div class="hotel-info-content">
-                        <h4 data-translate="accommodationHotel1">Pousada Vila Viçosa ****</h4>
-                        <p data-translate="accommodationHotel1Desc"></p>
-                        
+                        <h4>Pousada Vila Viçosa ****</h4>
                     </div>
                     <img class="hotel-image" src="img/pousada.jpg" alt="Pousada Vila Viçosa">
+                </a>
+
+                <a class="hotel-info" href="https://www.booking.com/Share-GEokktL" target="_blank">
+                    <div class="hotel-info-content">
+                        <h4>Hotel São João de Deus ****</h4>
+                    </div>
+                    <img class="hotel-image" src="img/hotel_sjd.jpg" alt="Hotel Sao Joao Deus">
                 </a>
 
             </div>            
@@ -118,30 +123,26 @@
             <h2 class="section-title" data-translate="giftTitle">Presentes</h2>
             <div class="gallery-content">
                 <div class="gallery-text">
-                <p data-translate="giftText">Querida familia e amigos,</p>
+                <p data-translate="giftText">Querida família e amigos,</p>
 
-                    <p data-translate="giftText2">A vossa presença no nosso casamento é o presente mais importante.</p>
+                    <p data-translate="giftText2">Estarem connosco neste dia é para nós o presente mais importante.</p>
                     <p data-translate="giftText3">Contudo seria uma grande ajuda se puderem contribuir para esta nova etapa da nossa vida. Deixamos abaixo algumas sugestões de presentes que nos servirão para o nosso futuro lar.</p>
                     <p data-translate="giftText4">Obrigada por estarem connosco neste dia tão especial!</p>
                     <p data-translate="giftText5"><i>(Tanto os artigos como os valores são meramente indicativos.)</i></p>
 
+                    <button class="lista-btn" type="button" id="open-modal">Ver lista</button>
 
                     <br/>
                     <div class="bank-details-container">
                         <div class="bank-details">
-                            <img src="img/ca.png" style="width: 65px; height: 30px;"/>
-                            <p><strong>IBAN:</strong> PT50 0045 8700 4037 1476 3351 4</p>
+                            <img src="img/ca.png" style="width: 65px; height: 35px;"/>
+                            <p><strong>IBAN:</strong> PT50 0045 6163 4031 5578 1861 9</p>
                             <p><strong>Titular:</strong> Carolina Figueiredo</p>
                         </div>
                         <div class="bank-details">
-                            <img src="img/mbway.png" style="width: 65px; height: 30px;"/>
-                            <p><strong>Numero:</strong> 927935640</p>
-                            <p><strong>Titular:</strong> Carolina</p>
-                        </div>
-                        <div class="bank-details">
-                            <img src="img/mbway.png" style="width: 65px; height: 30px;"/>
-                            <p><strong>Numero:</strong> 910768594</p>
-                            <p><strong>Titular:</strong> José</p>
+                            <img src="img/revolut.png" style="width: 85px; height: 35px;"/>
+                            <p><strong>IBAN:</strong> PT50 3560 0001 9001 8594 5261 4</p>
+                            <p><strong>Titular:</strong> Carolina Figueiredo</p>
                         </div>
                     </div>
                 </div>
@@ -154,9 +155,7 @@
     <section id="rsvp" class="example2 last-section">
         <div class="container">
             <h2 class="section-title" data-translate="rsvpTitle">RSVP</h2>
-            <div class="example2-content">
-                <div class="example2-text">
-                    <p data-translate="rsvpFormTitle">Por favor confirme a sua presença. Adicione uma entrada por pessoa, incluindo crianças, no formulário abaixo.</p>                    
+            <div class="example2-content rsvp-content">
                     <form id="rsvpForm" class="rsvp-form">
                         <div class="form-group">
                             <label data-translate="rsvpFormAttendance">Vou estar presente?</label>
@@ -195,7 +194,6 @@
                         <h3 data-translate="rsvpFormSuccessTitle">Obrigado!</h3>
                         <p data-translate="rsvpFormSuccessMessage">A sua resposta foi enviada com sucesso.</p>
                     </div>
-                </div>
             </div>
         </div>
     </section>
@@ -203,6 +201,160 @@
     <!-- Toast Container -->
     <div class="toast-container"></div>
 
+    <!-- Lista Modal -->
+    <div class="modal" id="website-modal" aria-hidden="true">
+        <div class="modal__backdrop" data-close-modal></div>
+
+        <div
+                class="modal__content"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="modal-title"
+        >
+            <button
+                    type="button"
+                    class="modal__close"
+                    data-close-modal
+                    aria-label="Close modal"
+            >
+                &times;
+            </button>
+
+            <h2 id="modal-title">Lista Casamento</h2>
+
+            <div class="modal__body">
+                <!-- Modal content -->
+                <div class="presents_grid">
+                    <div class="present">
+                        <img src="img/presentes/bimby.png" style="height: 180px;"/>
+                        <div>Bimby: 1600€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/airfryer.png" style="height: 180px;"/>
+                        <div>Air Fryer 7,5L: 150€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/maqcafe.png" style="height: 180px;"/>
+                        <div>Máquina Café Grãos: 600€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/colchao.png" style="height: 180px;"/>
+                        <div>Colchão Molaflex: 800€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/somie.png" style="height: 180px;"/>
+                        <div>Somie Molaflex: 700€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/tv.png" style="height: 180px; width: 300px;"/>
+                        <div>TV para sala + Móvel: 1200€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/sofa2.png" style="height: 180px;"/>
+                        <div>Sofá-cama para escritório - Ikea Bege: 600€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/sofa3.png" style="height: 180px;"/>
+                        <div>Sofá 3 lugares c/ chaise longue - Ikea Bege: 800€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/dyson.png" style="height: 180px;"/>
+                        <div>Aspirador vertical Dyson: 500€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/ac.png" style="height: 180px;"/>
+                        <div>Ar condicionado + Instalação: 2800€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/estante.png" style="height: 180px;"/>
+                        <div>Estante Escritório Ikea: 250€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/maqsecar.png" style="height: 180px;"/>
+                        <div>Máquina de secar roupa: 700€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/faqueiro.png" style="height: 180px;"/>
+                        <div>Serviço Cupitol 130 peças: 1300€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/loica.png" style="height: 180px;"/>
+                        <div>Serviço Vista Alegre Cambridge: 2000€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/jarro.png" style="height: 180px;"/>
+                        <div>Jarro Bordalo Pinheiro: 53€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/prato1.png" style="height: 180px;"/>
+                        <div>Taça pequena Bordalo Pinheiro: 9€/un</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/prato2.png" style="height: 180px;"/>
+                        <div>Travessa Bordalo Pinheiro: 40€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/prato3.png" style="height: 180px;"/>
+                        <div>Saladeira Bordalo Pinheiro: 44€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/manteigueira.png" style="height: 180px;"/>
+                        <div>Queijeira Bordalo Pinheiro: 68€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/cristal.png" style="height: 180px;"/>
+                        <div>Bomboneira Vista Alegre: 125€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/arraiolos.png" style="height: 180px;"/>
+                        <div>Tapetes Arraiolos: 1000€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/panelas.png" style="height: 180px;"/>
+                        <div>Utensílios Cozinha Le Creuset - 13 peças: 1600€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/copo1.png" style="height: 180px;"/>
+                        <div>12 Copos de cristal Vista Alegre: 144€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/copo2.png" style="height: 180px;"/>
+                        <div>12 Copos de cristal Vista Alegre: 144€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/jarro2.png" style="height: 180px;"/>
+                        <div>Garrafa Vista Alegre: 60€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/galhoteiro.png" style="height: 180px;"/>
+                        <div>Galhoteiro Vista Alegre: 400€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/whiskey.png" style="height: 180px;"/>
+                        <div>Estojo com frasco e 4 copos baixos Chartres Vista Alegre: 385€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/boleira.png" style="height: 180px;"/>
+                        <div>Boleira Vista Alegre: 250€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/taca.png" style="height: 180px;"/>
+                        <div>Saladeira Vista Alegre: 55€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/presepio.png" style="height: 180px;"/>
+                        <div>Presepio Vista Alegre: 215€</div>
+                    </div>
+                    <div class="present">
+                        <img src="img/presentes/bases.png" style="height: 180px;"/>
+                        <div>Base para copos Zara Home (12 un): 4,99€/un</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script src="modal.js"></script>
 </body>
 </html>

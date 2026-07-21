@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Disable submit button and show loading state
         submitBtn.disabled = true;
-        submitBtn.textContent = translations[currentLang].rsvpFormSending;
+        submitBtn.textContent = "A enviar...";
         
         try {
             const formData = new FormData(form);
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             // Show success toast
-            showToast(translations[currentLang].rsvpFormSuccessToast, 'success');
+            showToast("RSVP submetido com sucesso", 'success');
             
             // Hide form and show success message
             form.style.display = 'none';
@@ -142,11 +142,11 @@ document.addEventListener('DOMContentLoaded', function() {
             
         } catch (error) {
             // Show error toast
-            showToast(translations[currentLang].rsvpFormErrorToast, 'error');
+            showToast("Ocorreu um erro ao submeter. Tente mais tarde.", 'error');
         } finally {
             // Re-enable submit button
             submitBtn.disabled = false;
-            submitBtn.textContent = translations[currentLang].rsvpFormSubmit;
+            submitBtn.textContent = "Submeter";
         }
     });
 });
