@@ -52,6 +52,13 @@ a:hover {
     align-content: center;
 }
 
+@media (max-width: 848px) {
+    .presents_grid {
+        grid-template-columns: auto;
+    }
+}
+
+
 .present {
         display: flex;
         flex-direction: column;
@@ -502,12 +509,12 @@ footer .logo img {
 
 /* RSVP Form Styles */
 .rsvp-form {
-    max-width: 500px;
     margin: 40px auto;
     padding: 30px;    
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);    
     border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 450px;
 }
 
 .form-group {
@@ -900,8 +907,4 @@ footer .logo img {
 .bank-details strong {
     color: #000;
     font-weight: 500;
-} 
-
-.rsvp-form {
-    width: 450px;
 }
