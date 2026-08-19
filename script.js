@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     song: song
                 };
 
-                const response = await fetch('https://script.google.com/macros/s/AKfycbzTHrrPcd0PgLBKkYX4HpqXBqm2TXIOWEfjxZSa-EnOxh9kkC601axFUP6oPSQlnf_r/exec', {
+                const response = await fetch('https://script.google.com/macros/s/AKfycbzP-RngUsZPb87ae9sIYmH5EkVzPjg3Chj0X_M3ybUz5pQFRPF3vUiu8SRlrkJkTrk-/exec', {
                     method: 'POST',
                     mode: 'no-cors',
                     headers: {
