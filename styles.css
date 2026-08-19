@@ -367,6 +367,7 @@ section {
 .example2-content {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
